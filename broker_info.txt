@@ -1,0 +1,11 @@
+broker.mqttdashboard.com
+
+8000
+
+Datero/BD/#
+
+
+
+
+Info tabla HTML a excel:
+https://www.youtube.com/watch?v=QlixLIQfABo

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime location tracker</title>
+
+    <!-- leaflet css  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+</html>
+
+<!-- leaflet js  -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Map initialization 
+    var map = L.map('map').setView([-12.017093, -76.893417], 12);
+
+    //osm layer
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
+/*
+    if(!navigator.geolocation) {
+        console.log("Your browser doesn't support geolocation feature!")
+    } else {
+        setInterval(() => {
+            navigator.geolocation.watchPosition(showPositions)
+        }, 5000);
+    }
+*/
+    
+    var pos1={id:1, lat:-11.979067, lon:-76.782601, acc:14};
+    var pos2={id:2, lat:-12.033704, lon:-76.942374, acc:14};
+    
+
+    setInterval(()=>{
+        showPosition(pos1)
+        showPosition(pos2)
+        pos1.lon=pos1.lon-0.000500
+        pos2.lon=pos2.lon+0.000500
+    }, 1000)
+    var n=2; // number of units
+    var marker=[], circle=[];
+    
+    /*
+    var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+    */
+
+    function showPosition(pos) {
+        console.log(marker[id])
+        var lat = pos.lat
+        var lon = pos.lon
+        var acc = pos.acc
+        var id = pos.id
+        if(marker[id]) {
+            map.removeLayer(marker[id])
+        }
+        if(circle[id]) {
+            map.removeLayer(circle[id])
+        }
+        marker[id] = L.marker([lat, lon], {icon: myIcon})
+        circle[id] = L.circle([lat, lon], {radius: acc})
+        
+        /*
+        switch (pos.id) {
+            case 1:
+                marker[id] = L.marker([lat, lon])
+                circle[id] = L.circle([lat, lon], {radius: acc})
+                break;
+            case 2:
+                marker[id] = L.marker([lat, lon], {icon: greenIcon})
+                circle[id] = L.circle([lat, lon], {radius: acc})
+                break;
+            default:
+                marker[id] = L.marker([lat, lon])
+                circle[id] = L.circle([lat, lon], {radius: acc})
+                break;
+        }
+        */
+
+        var featureGroup = L.featureGroup([marker[id], circle[id]]).addTo(map)
+        
+    }
+    /*
+    function getPosition(position){
+        // console.log(position)
+        var lat = position.coords.latitude
+        var long = position.coords.longitude
+        var accuracy = position.coords.accuracy
+
+        if(marker) {
+            map.removeLayer(marker)
+        }
+
+        if(circle) {
+            map.removeLayer(circle)
+        }
+
+        marker = L.marker([lat, long])
+        circle = L.circle([lat, long], {radius: accuracy})
+        
+        marker1 = L.marker([-12.017093, -76.893417])
+        circle1 = L.circle([-12.017093, -76.893417], {radius: 14})
+
+        var featureGroup = L.featureGroup([marker, circle]).addTo(map)
+        var featureGroup1 = L.featureGroup([marker1, circle1]).addTo(map)
+
+        map.fitBounds(featureGroup1.getBounds())
+        map.fitBounds(featureGroup.getBounds())
+        
+
+        console.log("Your coordinate is: Lat: "+ lat +" Long: "+ long+ " Accuracy: "+ accuracy)
+    }
+    */
+
+</script>

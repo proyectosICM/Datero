@@ -1,0 +1,72 @@
+
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: darkgrey;
+}
+
+header{
+    background-color: black;
+    font-size:xx-large;
+    color: gray;
+    text-align: center;
+}
+
+.menu {
+    width: 90vw;
+    margin: 0 auto;
+}
+img{
+    width: 80px;
+    padding: 8px;
+    float: left;
+}
+nav{
+    float: left;
+}
+nav ul li {
+    list-style:none;
+    margin-left: 75px;
+    padding: 12px 0;
+    float: center;
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    display: block;
+    content: '';
+    width: 0%;
+    background: #444;
+    height: 5px;
+    top:0;
+    position: absolute;
+    transition: width 0.2s;
+}
+  
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+h1{
+    
+    background-color:goldenrod;
+    text-align: center;
+}
+
+#headern{
+    
+    text-align: center;
+}
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: gainsboro;
+}
+

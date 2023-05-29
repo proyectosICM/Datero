@@ -1,0 +1,41 @@
+The ESP32 communicates with the SIM7000G module via Serial communication on the following pis:
+TX: GPIO 26
+RX: GPIO 27
+POWER: GPIO 04
+(DTR: GPIO 25)
+
+The ESP32 uses the following GPIOs to communicate with the microSD card via SPI communication protocol:
+MOSI: GPIO15
+SCLK: GPIO 14
+CS: GPIO 13
+MISO: GPIO 2
+
+LED Pin: GPIO 12
+
+Antennas
+The board comes with two u.fl connectors to connect a GPS antenna and an LTE antenna. The antennas are included when you buy the board.
+
+
+===============
+
+LILYGO T-SIM7000G ESP32 board features:
+
+Supply voltage: 3.3V DC or 5V DC
+ESP32 chip (WROVER-B Module) (240MHz dual-core processor)
+Flash memory: 4MB
+PSRAM: 8MB
+SRAM: 520KB
+Built-in Wi-Fi
+Built-in Bluetooth
+USB to serial converter: CP2104 or CH9102 (drivers)
+Built-in SIM7000G module
+Built-in nano SIM card slot
+Built-in SIM antenna slot
+Built-in GPS antenna slot
+Built-in Li-ion/Li-Po battery charging circuit:
+DW01A battery protection IC
+CN3065 solar energy charging interface for 4.4-6.8V solar panel
+Built-in 1x 18650 battery holder
+Built-in solar panel connector 2p JST-PH
+Built-in Micro SD card slot
+Built-in on/off switch

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap Introducción</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+	<!-- meta:vp(ctrl+E) view port antiguo de emmet, usar mejor de la documentación Bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- el meta view port es importante para que la pagina sea "responsive"(mobile/pc) -->
+	<style>
+		header{background-color: #2CC71C;}
+		/*h1{padding-left: 100px;}  -> CSS*/
+		#titulo{border-width: 5px !important;}
+		/*usar !important solo como último recurso*/
+	</style>
+</head>
+<body>
+	<!-- clase Container: pone limites a la pagina, evita que la pagina se desborde(expanda) en todo el ancho de la pantalla -->
+	<!-- header.container+main.container+footer.container (ctrl+E)-->
+	<header class="container">
+		<h1 id="titulo" class="px-3 py-4 border border-dark text-center">Mi Titulo</h1>
+	</header>
+	<main class="container">
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Enlace</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Dropdown
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Action</a>
+		          <a class="dropdown-item" href="#">Another action</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="#">Something else here</a>
+		        </div>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+		      </li>
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <i class="fas fa-search"></i> </button>
+		    </form>
+		  </div>
+		</nav>
+
+		<div class="row">
+			<!-- div.col-lg-2*6: va a ocupar 2/12 de la pantalla y lg(large) indica que es par pantalla >=992px(PC's) -->
+			<div class="col-lg-2">
+				<i class="fas fa-handshake"></i>
+				<h2 class="text-sm-center">Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam, ducimus iste veritatis, amet tempore!</p>
+			</div>
+			<div class="col-lg-2">
+				<i class="fas fa-handshake"></i>
+				<h2 class="text-sm-center">Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quibusdam commodi quasi voluptatem non magni!</p>
+			</div>
+			<div class="col-lg-2">
+				<i class="fas fa-handshake"></i>
+				<h2 class="text-sm-center">Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ab magni, et quod ea odio.</p>
+			</div>
+			<div class="col-lg-2">
+				<i class="fas fa-handshake"></i>
+				<h2 class="text-sm-center">Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus facilis velit, voluptatibus magnam, porro provident.</p>
+			</div>
+			<div class="col-lg-2">
+				<i class="fas fa-handshake"></i>
+				<h2 class="text-sm-center">Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quo nostrum quisquam asperiores, blanditiis, consectetur.</p>
+			</div>
+			<div class="col-lg-2">
+				<i class="fas fa-handshake"></i>
+				<h2 class="text-sm-center">Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quo nostrum quisquam asperiores, blanditiis, consectetur.</p>
+			</div>
+		</div>
+	</main>
+	<footer class="container">
+		
+	</footer>
+
+	<!-- para usar el DROPDOWN: -->
+	<!-- pegamos el script https...bundle.min.js, aunque no va a funcoinar si no se pone el jquery slim antes -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Datero</title>
+        <link rel="stylesheet" href="style.css" />
+        <script
+          src="https://kit.fontawesome.com/7e5b2d153f.js"
+          crossorigin="anonymous"
+        ></script>
+        <script defer src="index.js"></script>
+        <!--
+        <script src="https://unpkg.com/paho-mqtt@1.0.2/paho-mqtt.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+        -->
+        
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <img src="logo_icm3.png" alt="">
+                <button class="nav-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i> <!-- hamburguer icon for mobile devices-->
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link nav-link">TABLA DE MONITOREO</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="mapRT.html" class="nav-menu-link nav-link">MAPA DE MONITOREO</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="registros.php" class="nav-menu-link nav-link">REGISTROS</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="wrapper">
+                <h1> Monitoreo de vehículos </h1><br><br>
+                <h2> IDA </h2>
+                <h3> ATE → SAN MIGUEL </h3><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th >PLACA</th>
+                            <th >TIEMPO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-1">
+                        <tr>
+                          <td>HDI-873</td>
+                          <td>-18 min</td>
+                        </tr>
+                        <tr>
+                          <td>LKF-621</td>
+                          <td>-10 min</td>
+                        </tr>
+                        <tr>
+                          <td>FGO-238</td>
+                          <td>-6 min</td>
+                        </tr>
+                        <tr>
+                          <td>HDK-254</td>
+                          <td>0</td>
+                        </tr>
+                      </tbody>
+                </table>
+                
+                <br><br>
+                <h2> VUELTA </h2>
+                <h3> SAN MIGUEL → ATE</h3><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PLACA</th>
+                            <th>TIEMPO</th>
+                          </tr>
+                    </thead>
+                    <tbody id="table-2">
+                      <tr>
+                        <td>XEC-129</td>
+                        <td>-22 min</td>
+                      </tr>
+                      <tr>
+                        <td>AAF-426</td>
+                        <td>-14 min</td>
+                      </tr>
+                      <tr>
+                        <td>CDQ-749</td>
+                        <td>-10 min</td>
+                      </tr>
+                      <tr>
+                        <td>FRI-021</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                </table><br><br>
+                
+
+                <h3>
+                  <a href="mapRT.html" class="LinkRT" style="color: darkslategrey"> VER UBICACIONES EN TIEMPO REAL</a><br><br><br><br>
+                </h3><br>
+                
+                
+            </div>
+            
+        </main>
+  </body>
+</html>

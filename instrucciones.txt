@@ -1,0 +1,1 @@
+Ir a la carpeta dónde se instaló xampp: abrir htdocs ahí se encuentra la última versión de la página web e instrucciones adicionales
